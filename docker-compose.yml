@@ -4,7 +4,7 @@ services:
   mysql:
     privileged: true
     ports:
-      - 3306:3306
+      - "3306:3306"
     environment:
       - MYSQL_DATABASE=aurelio
       - MYSQL_ROOT_PASSWORD=root
@@ -33,7 +33,7 @@ services:
     image: mongo-express
     restart: always
     ports:
-      - 8085:8081
+      - "8085:8081"
     environment:
       - ME_CONFIG_MONGODB_SERVER=mongodb
       - ME_CONFIG_MONGODB_AUTH_USERNAME=root
@@ -98,7 +98,7 @@ services:
       - kafka
       - control-center
     ports:
-      - 8083:8083
+      - "8083:8083"
     environment:
       CONNECT_BOOTSTRAP_SERVERS: "kafka:9092"
       CONNECT_REST_PORT: 8083
@@ -148,7 +148,7 @@ services:
   kafka-connector-mysql:
     image: confluentinc/cp-kafka-connect:latest
     ports:
-      - 28083:28083
+      - "28083:28083"
     links:
       - kafka
       - zookeeper
