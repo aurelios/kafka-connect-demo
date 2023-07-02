@@ -1,6 +1,6 @@
 # kafka-connect-demo
 
-This project is a demo of how we can produce and consume messages of a kafka topic using avros.
+This project is a demo of how to configure kafka connect to migrate data from mysql to mongodb.
 
 ## Getting Started
 
